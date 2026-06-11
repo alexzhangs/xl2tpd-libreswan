@@ -1,0 +1,15 @@
+ipcp-accept-local
+ipcp-accept-remote
+ms-dns <PRIMARY_DNS>
+ms-dns <SECONDARY_DNS>
+noccp
+auth
+# Require the strongest PPP auth that modern L2TP clients all support;
+# refuse cleartext PAP and the broken MS-CHAPv1.
+refuse-pap
+refuse-mschap
+require-mschap-v2
+idle 1800
+connect-delay 5000
+lcp-echo-interval 30
+lcp-echo-failure 4
