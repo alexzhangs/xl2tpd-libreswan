@@ -14,6 +14,10 @@ on:
   release:
     types: [published]
 
+# Needed by the "Push tag" step: the default GITHUB_TOKEN is read-only on new repos.
+permissions:
+  contents: write
+
 jobs:
   docker-build-and-push:
     runs-on: ubuntu-latest
